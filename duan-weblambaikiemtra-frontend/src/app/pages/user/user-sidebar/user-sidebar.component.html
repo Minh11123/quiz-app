@@ -1,0 +1,19 @@
+<mat-card class="mt-20 my-card">
+  <mat-action-list>
+    <h1>Menu</h1>
+    <button mat-list-item routerLink="/user-dashboard/profile">
+        <mat-icon mat-list-icon> account_circle </mat-icon>Cá nhân
+      </button>
+    <button
+      mat-list-item
+      routerLink="/user-dashboard/quiz-level/{{ category.id }}"
+      *ngFor="let category of categories"
+    >
+      <mat-icon mat-list-icon>quiz</mat-icon>{{ category.title }}
+    </button>
+    <button mat-list-item routerLink="/user-dashboard/document">
+      <mat-icon mat-list-icon>book</mat-icon>Tài liệu tiếng trung
+    </button>
+
+  </mat-action-list>
+</mat-card>

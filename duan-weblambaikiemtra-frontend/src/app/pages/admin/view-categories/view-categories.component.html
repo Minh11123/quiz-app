@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row mt-20" >
+    <div class="col-md-4">
+<!--      <mat-card *ngFor="let category of categories" class="my-card mb-20">-->
+<!--        <mat-card-actions>-->
+<!--          &lt;!&ndash; <button mat-button color="primary">View</button> &ndash;&gt;-->
+<!--          <button mat-raised-button color="primary" routerLink="/admin/quizzes/{{category.id}}/{{type}}">{{category.title}}</button>-->
+<!--        </mat-card-actions>-->
+<!--      </mat-card>-->
+      <mat-card *ngFor="let category of categories" style="width:88%;display: flex; align-items: center; justify-content: center; background-color: #F7F5AD" class="my-card mb-20">
+        <button  routerLink="/admin/quizzes/{{category.id}}/{{type}}" class="custom-btn btn-7"><span>Bài thi {{category.title}} sơ cấp {{type}}</span></button>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<button  style="margin-bottom: -10px; display: inline" [routerLink]="['/admin/add-quiz']" [queryParams]="{type: typeTitle, cate: category.id}"  mat-raised-button color="primary">Thêm bài thi mới</button>
+<h1 style="display: inline; color: #F7F5AD;font-family: 'Calligraffitti', cursive">{{category.title}} sơ cấp {{type}}</h1>
+<mat-card class="mt-20 my-card" *ngFor="let quiz of pagedQuizzes | async; let i = index">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image-quiz"></div>
+    <mat-card-title>{{ quiz.title }}</mat-card-title>
+    <mat-card-subtitle>
+      {{ quiz.category.title }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{ quiz.description }}
+  </mat-card-content>
+  <mat-card-actions>
+      <button routerLink="/admin/view-questions/{{quiz.id}}/{{quiz.title}}" [queryParams]="{type: cateId}" mat-raised-button color="warn">Các câu hỏi</button>
+      <button mat-stroked-button color="accent">Tổng điểm cao nhất {{quiz.maxMarks}}</button>
+      <button mat-stroked-button color="accent">Số câu hỏi trong bài thi {{quiz.numberOfQuestion}}</button>
+      <button mat-raised-button color="accent" routerLink="/admin/quiz/{{quiz.id}}"> Cập nhật </button>
+      <!-- <button mat-raised-button color="warn">Attempts</button> -->
+      <button mat-raised-button color="warn" (click)="deleteQuiz(quiz.id)">Xoá</button>
+  </mat-card-actions>
+</mat-card>
+<div class="container text-center mt-20">
+  <button style="background-color: #b2ede1; color: darkgreen" mat-raised-button color="primary" class="mr-20" *ngIf="currentPage > 1 "  (click)="backQuizzes()">
+    Những bài thi trước
+  </button>
+  <button style="background-color: #b2ede1; color: darkgreen"  mat-raised-button color="primary" *ngIf="currentPage < 8"  (click)="nextQuizzes()">
+    Những bài thi tiếp theo
+  </button>
+</div>
+
+
+

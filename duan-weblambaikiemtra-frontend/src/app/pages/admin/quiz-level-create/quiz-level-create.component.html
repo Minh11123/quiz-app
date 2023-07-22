@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row mt-20" >
+    <div class="col-md-4">
+      <mat-card style="width:80%;display: flex; align-items: center; justify-content: center; background-color: #F7F5AD" class="my-card mb-20">
+
+        <!-- <button mat-button color="primary">View</button> -->
+        <!--          <button style="margin-top: 1%" [routerLink]="['/user-dashboard', cateId]" [queryParams]="{type: 'level1'}" class="snip1547"><span>Sơ cấp 1</span></button>-->
+        <button  [routerLink]="['/admin/add-quiz']" [queryParams]="{type: 'level1'}" class="custom-btn btn-7"><span>Sơ cấp 1</span></button>
+      </mat-card>
+      <mat-card style="width:80%;display: flex; align-items: center; justify-content: center; background-color: #F7F5AD" class="my-card mb-20">
+        <!-- <button mat-button color="primary">View</button> -->
+        <button [routerLink]="['/admin/add-quiz']" [queryParams]="{type: 'level2'}" class="custom-btn btn-7"><span>Sơ cấp 2</span></button>
+
+      </mat-card>
+    </div>
+
+  </div>
+</div>

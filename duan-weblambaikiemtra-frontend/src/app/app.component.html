@@ -1,0 +1,13 @@
+<ngx-ui-loader fgsColor="#ff0000" text="Đang tải dữ liệu..." pbColor="#ff0000" textColor="#000000" [pbThickness]="8" [minTime]="500"></ngx-ui-loader>
+
+<!--<app-loader>-->
+
+<!--  <div class="my-navbar full-width " >-->
+
+<!--    <app-navbar *ngIf="lo"></app-navbar>-->
+<!--    <app-user-dashboard *ngIf="loginService.isLoggedIn()"></app-user-dashboard>-->
+
+<router-outlet ngxUiLoaderBlurred [blur]="10"></router-outlet>
+
+
+

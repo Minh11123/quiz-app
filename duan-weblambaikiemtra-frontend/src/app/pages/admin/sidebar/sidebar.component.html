@@ -1,0 +1,26 @@
+<mat-card class="mt-20 my-card">
+    <mat-action-list>
+        <div mat-subheader> Menu </div>
+        <button mat-list-item routerLink="/admin">
+            <mat-icon mat-list-icon>home</mat-icon>Trang chủ
+        </button>
+        <button mat-list-item routerLink="/admin/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon>Thông tin cá nhân
+        </button>
+        <button mat-list-item routerLink="/admin/quiz-level-view">
+            <mat-icon mat-list-icon>quiz</mat-icon>Các bài thi
+        </button>
+      <button class="my-button"  mat-list-item routerLink="/admin/level-doc-view-update">
+        <mat-icon mat-list-icon>book</mat-icon>Tài liệu tiếng trung
+      </button>
+        <button mat-list-item routerLink="/admin/quiz-level">
+            <mat-icon mat-list-icon>add</mat-icon>Thêm bài thi mới
+        </button>
+      <button mat-list-item routerLink="/admin/level-doc-view">
+        <mat-icon mat-list-icon>add</mat-icon>Thêm document mới
+      </button>
+        <button mat-list-item (click)="logOut()">
+            <mat-icon mat-list-icon>logout</mat-icon>Thoát
+        </button>
+    </mat-action-list>
+</mat-card>

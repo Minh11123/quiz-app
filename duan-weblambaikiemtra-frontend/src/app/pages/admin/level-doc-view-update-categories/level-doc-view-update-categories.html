@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row mt-20" >
+    <div class="col-md-4">
+
+        <mat-card *ngFor="let category of categories" style="width:88%;display: flex; align-items: center; justify-content: center; background-color: #F7F5AD" class="my-card mb-20">
+          <button  routerLink="/admin/view-document/{{category.id}}/{{type}}" class="custom-btn btn-7"><span>Tài liệu {{category.title}} sơ cấp {{type}}</span></button>
+        </mat-card>
+
+    </div>
+  </div>
+</div>

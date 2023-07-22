@@ -1,0 +1,213 @@
+<!--&lt;!&ndash; <mat-toolbar color="accent">-->
+<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--      <mat-icon>menu</mat-icon>-->
+<!--    </button>-->
+<!--    <span>My App</span>-->
+<!--    <span class="example-spacer"></span>-->
+<!--    <a-->
+<!--    *ngIf="!loginService.isLoggedIn()"-->
+<!--    [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon mr-20" aria-label="Example icon-button with heart icon">-->
+<!--      Login-->
+<!--    </a>-->
+<!--    <a-->
+<!--    *ngIf="!loginService.isLoggedIn()"-->
+<!--    [routerLink]="['/signup']"  mat-icon-button class="example-icon mr-20" aria-label="Example icon-button with share icon">-->
+<!--      Register-->
+<!--    </a>-->
+<!--    <a-->
+<!--    *ngIf="loginService.isLoggedIn()&&loginService.getUser()!=null"-->
+<!--      mat-icon-button class="example-icon mr-20" style="padding-right: 70px;" aria-label="Example icon-button with share icon">-->
+<!--        Xin chào {{loginService.getUser().username}}-->
+<!--    </a>-->
+
+<!--     <a-->
+<!--    *ngIf="loginService.isLoggedIn()"-->
+<!--    (click)="logout()"  mat-icon-button class="example-icon mr-20 ml-20" aria-label="Example icon-button with share icon">-->
+<!--      Logout-->
+<!--    </a>-->
+
+
+
+<!--  </mat-toolbar> &ndash;&gt;-->
+
+<!--    <mat-toolbar  >-->
+<!--    &lt;!&ndash; <button *ngIf="user&&user.roles[0].roleName=='ADMIN'" routerLink="/admin" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--      <mat-icon style="font-size: 35px;">home</mat-icon>-->
+<!--    </button> &ndash;&gt;-->
+<!--&lt;!&ndash;    <button routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">&ndash;&gt;-->
+<!--&lt;!&ndash;      <mat-icon style="font-size: 35px;">home</mat-icon>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--      <div class="text-container">-->
+<!--        <h1>Chinese-exercise</h1>-->
+<!--      </div>-->
+<!--    &lt;!&ndash; <button *ngIf="user&&user.roles[0].roleName=='USER'" routerLink="/user-dashboard" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--      <mat-icon style="font-size: 35px;">home</mat-icon>-->
+<!--    </button> &ndash;&gt;-->
+
+<!--    <span class="example-spacer"></span>-->
+<!--    <a-->
+<!--    *ngIf="!isLoggedIn"-->
+<!--    [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon mr-20" aria-label="Example icon-button with heart icon">-->
+<!--      Đăng nhập-->
+<!--    </a>-->
+<!--    <a-->
+<!--    *ngIf="!isLoggedIn"-->
+<!--    [routerLink]="['/signup']"  mat-icon-button class="example-icon ml-20 mr-20" aria-label="Example icon-button with share icon">-->
+<!--      Đăng ký-->
+<!--    </a>-->
+<!--    <a-->
+<!--    *ngIf="isLoggedIn&&user!=null&&user.roles[0].roleName=='ADMIN'"-->
+<!--      mat-icon-button  routerLink="/admin/profile" class="example-icon mr-20" style="padding-right: 180px;" aria-label="Example icon-button with share icon">-->
+<!--      <div class="username">{{user.username}}         <img class="my-avatar" src="{{!user.avatar?'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYpR4DvujRhJleInDuoohGQ-nthBJNBrYiHA&usqp=CAU':user.avatar}}" alt="">-->
+<!--      </div>-->
+<!--    </a>-->
+
+<!--    <a-->
+<!--    *ngIf="isLoggedIn&&user!=null&&user.roles[0].roleName=='USER'"-->
+<!--      mat-icon-button  routerLink="/user-dashboard/profile " class="example-icon mr-20" style="padding-right: 180px;" aria-label="Example icon-button with share icon">-->
+<!--&lt;!&ndash;        Xin chào {{user.username}}&ndash;&gt;-->
+<!--      <div class="username">{{user.username}}         <img class="my-avatar" src="{{!user.avatar?'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYpR4DvujRhJleInDuoohGQ-nthBJNBrYiHA&usqp=CAU':user.avatar}}" alt="">-->
+<!--      </div>-->
+<!--    </a>-->
+
+
+
+<!--     <a-->
+<!--    *ngIf="isLoggedIn"-->
+<!--    (click)="logout()"  mat-icon-button class="example-icon mr-20 ml-20" aria-label="Example icon-button with share icon">-->
+<!--      Thoát-->
+<!--    </a>-->
+<!--    </mat-toolbar>-->
+
+
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-2">-->
+<!--           <app-user-sidebar></app-user-sidebar>-->
+<!--        </div>-->
+<!--        <div class="col-md-10">-->
+<!--            <router-outlet></router-outlet>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!---->
+<!------------------------------>
+<!-- Header Start -->
+<!------------------------------>
+
+<!--<div *ngIf="router.url !== '/login'">-->
+
+
+
+  <section class="" id="section_2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-12">
+          <h3 style="color: #146c43" class="mb-lg-5 mb-4">Các video mà chúng tôi cung cấp cho bạn</h3>
+        </div>
+        <div>
+
+        </div>
+
+        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+          <div class="custom-block-image-wrap">
+            <div class="ratio ratio-16x9">
+<!--              <video width="560" height="315" controls>-->
+<!--                <source src="https://drive.google.com/uc?export=download&id=1JZ17PNggg6eAQO0PIKT6Udd_GgFrTav_" type="video/mp4">-->
+<!--                Your browser does not support the video tag.-->
+<!--              </video>-->
+              <iframe src="https://drive.google.com/file/d/1JZ17PNggg6eAQO0PIKT6Udd_GgFrTav_/preview" width="560" height="315"></iframe>
+
+
+            </div>
+          </div>
+
+          <div class="custom-block-info">
+            <a href="event-detail.html" class="events-title mb-2">Chủ đề : 运动</a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <div class="custom-block-image-wrap">
+
+              <div class="ratio ratio-16x9">
+                <!--              <video width="560" height="315" controls>-->
+                <!--                <source src="https://drive.google.com/uc?export=download&id=1JZ17PNggg6eAQO0PIKT6Udd_GgFrTav_" type="video/mp4">-->
+                <!--                Your browser does not support the video tag.-->
+                <!--              </video>-->
+                <iframe src="https://drive.google.com/file/d/1q-Jy4ej4sigl0e76w7PzR5vAimXsnCgH/preview" width="560" height="315"></iframe>
+              </div>
+          </div>
+
+          <div class="custom-block-info">
+            <a href="event-detail.html" class="events-title mb-2">Chủ đề : 颜色</a>
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+          <div class="custom-block-image-wrap">
+            <div class="ratio ratio-16x9">
+              <div class="ratio ratio-16x9">
+                <!--              <video width="560" height="315" controls>-->
+                <!--                <source src="https://drive.google.com/uc?export=download&id=1JZ17PNggg6eAQO0PIKT6Udd_GgFrTav_" type="video/mp4">-->
+                <!--                Your browser does not support the video tag.-->
+                <!--              </video>-->
+                <iframe src="https://drive.google.com/file/d/1aGiGUjb_bbLODs3k8c-U3OBUuM64ZLzt/preview" width="560" height="315"></iframe>
+
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="custom-block-info">
+            <a href="event-detail.html" class="events-title mb-2">Chủ đề : Phân biệt 几&多少</a>
+
+
+
+
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="custom-block-image-wrap">
+            <div class="ratio ratio-16x9">
+              <!--              <video width="560" height="315" controls>-->
+              <!--                <source src="https://drive.google.com/uc?export=download&id=1JZ17PNggg6eAQO0PIKT6Udd_GgFrTav_" type="video/mp4">-->
+              <!--                Your browser does not support the video tag.-->
+              <!--              </video>-->
+              <iframe src="https://drive.google.com/file/d/1nSysiEKt9EXrngj2bX6oo0YOKNUtr-LB/preview" width="560" height="315"></iframe>
+
+
+            </div>
+          </div>
+
+          <div class="custom-block-info">
+            <a href="event-detail.html" class="events-title mb-2">Chủ đề : Đại từ nghi vấn</a>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+

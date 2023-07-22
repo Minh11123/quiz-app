@@ -1,0 +1,135 @@
+<div class="container mt-20">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-subtitle
+            ><h1>
+              Thêm câu hỏi mới vào bài thi <strong>{{ quizTitle }}</strong>
+            </h1></mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <form (ngSubmit)="addQuestion()" #myForm="ngForm">
+
+              <!-- <textarea
+                [(ngModel)]="question.content"
+                name="content"
+                row="4"
+                matInput
+                required
+                placeholder="content"
+              ></textarea> -->
+              <ckeditor [editor]="Editor"
+              data="<p>hihih</p>"
+              name="content"
+              required
+              [(ngModel)]="question.content"
+              ></ckeditor>
+
+
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <mat-label>Đáp án thứ 1</mat-label>
+                  <input
+                    [(ngModel)]="question.option1"
+                    name="option1"
+                    type="text"
+                    matInput
+                    required
+                    placeholder="content"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <mat-label>Đáp án thứ 2</mat-label>
+                  <input
+                    [(ngModel)]="question.option2"
+                    name="option2"
+                    type="text"
+                    matInput
+                    required
+                    placeholder="content"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <mat-label>Đáp án thứ 3</mat-label>
+                  <input
+                    [(ngModel)]="question.option3"
+                    name="option3"
+                    type="text"
+                    matInput
+                    required
+                    placeholder="content"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="full-width">
+                  <mat-label>Đáp án thứ 4</mat-label>
+                  <input
+                    [(ngModel)]="question.option4"
+                    name="option4"
+                    type="text"
+                    required
+                    matInput
+                    placeholder="content"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col-md-7">
+                <mat-form-field class="full-width">
+                  <mat-label>link img</mat-label>
+                  <input
+                    [(ngModel)]="question.image"
+                    name="image"
+                    type="text"
+                    required
+                    matInput
+                    placeholder="content"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+            <mat-form-field class="full-width">
+              <mat-label>Đáp án đúng</mat-label>
+              <mat-select required [(ngModel)]="question.answer" name="answer">
+                <mat-option
+                  [value]="question.option1"
+                  *ngIf="question.option1"
+                  >{{ question.option1 }}</mat-option
+                >
+                <mat-option
+                  [value]="question.option2"
+                  *ngIf="question.option2"
+                  >{{ question.option2 }}</mat-option
+                >
+                <mat-option
+                  [value]="question.option3"
+                  *ngIf="question.option3"
+                  >{{ question.option3 }}</mat-option
+                >
+                <mat-option
+                  [value]="question.option4"
+                  *ngIf="question.option4"
+                  >{{ question.option4 }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+
+            <div class="container text-center">
+
+              <button mat-raised-button color="primary"  >Thêm</button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

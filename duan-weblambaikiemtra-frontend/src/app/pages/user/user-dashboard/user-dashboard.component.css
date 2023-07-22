@@ -1,0 +1,8 @@
+.router-outlet-wrapper {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+.gradient{
+  background: -webkit-linear-gradient(90deg, #848970,#9b9187,#ae8f8f,#d3bf6f,#53caba);background: linear-gradient(90deg, #848970,#9b9187,#ae8f8f,#d3bf6f,#53caba);
+}

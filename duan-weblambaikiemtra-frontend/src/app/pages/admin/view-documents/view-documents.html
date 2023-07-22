@@ -1,0 +1,21 @@
+<h1 style="display: inline; color: #F7F5AD;font-family: 'Calligraffitti', cursive">Các bài đọc {{category.title}} sơ cấp {{type}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container text-center">
+            </div>
+            <mat-card *ngFor="let document of documents; let i = index" class="mt-20 my-card">
+                <mat-card-content>
+                    <!-- vì cái ckeditor sẽ prifnt ra 1 đoạn html để cấu hình các kiểu chữ chứ ko phải text thường lên phải dùng innerHTML -->
+                    <strong>Bài {{i+1}}: </strong>
+                  <span [innerHTML]="document.content"></span>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="accent" routerLink="/admin/view-document/{{document.id}}">Cập nhật bài đọc</button>
+                    <button mat-button color="warn" (click)="deleteQuestion(document.id)">Xoá bài đọc</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</div>
