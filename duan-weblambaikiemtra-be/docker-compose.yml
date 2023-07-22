@@ -1,0 +1,7 @@
+services:
+  webktra:
+    build: .
+    image: webktra
+    container_name: webktra
+    ports:
+      - 8080:8080
